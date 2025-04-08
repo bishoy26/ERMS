@@ -1,0 +1,84 @@
+Enterprise Resource Management System (ERMS) – Project Proposal
+================================================================
+
+1. Project Overview
+--------------------
+The Enterprise Resource Management System (ERMS) is a comprehensive web-based platform designed for managing employees, projects, and tasks. ERMS aims to streamline enterprise operations by providing an integrated solution that includes user authentication, detailed reporting, secure REST API integration, and robust security measures. The system will offer features such as CRUD operations for employees, projects, and tasks, role-based access controls, and detailed custom reports to monitor project progress and employee performance.
+
+2. Scope and Objectives
+-------------------------
+Objectives:
+- Develop a fully functional ERMS that allows the management of employees, projects, and tasks.
+- Integrate ASP.NET Core MVC for the frontend and ASP.NET Core Web API for backend services.
+- Implement secure user authentication with role-based access control (Admin, Manager, Employee).
+- Provide comprehensive reporting features for project management and employee performance.
+- Ensure robust security by incorporating measures to prevent SQL injection, CSRF, and XSS attacks.
+- Deploy the application on a reliable hosting environment (Azure, AWS, or IIS).
+
+Scope:
+- **Employee Management:** Create, read, update, and delete (CRUD) operations for employee details.
+- **Project Management:** Enable CRUD operations for projects with functionalities such as employee assignment.
+- **Task Management:** Offer CRUD operations for project tasks, including managing priority and status.
+- **REST API:** Develop endpoints to support all operations via a secure web API.
+- **Testing:** Implement unit tests for both MVC Controllers and API endpoints to ensure a minimum of 70% code coverage.
+- **Reporting:** Develop custom reports using SQL Server Reporting Services (SSRS) for effective decision-making.
+- **Deployment:** Ensure the system is production-ready by deploying it on a cloud platform or a dedicated server with proper configuration and monitoring.
+
+3. Technology Stack
+---------------------
+- **Frontend & Backend Framework:** ASP.NET Core MVC for web application development.
+- **Web API:** ASP.NET Core Web API for exposing backend services.
+- **Database:** Microsoft SQL Server for data storage and management.
+- **Authentication & Authorization:** ASP.NET Identity for secure user management and role-based access control.
+- **Reporting:** SQL Server Reporting Services (SSRS) for custom reports.
+- **Testing Frameworks:** xUnit or NUnit for unit testing with dependency injection and mocking.
+- **Version Control & Deployment:** Git for version control and GitHub/GitLab for repository management; Deployment using Azure, AWS, or IIS.
+
+4. Project Milestones & Timeline
+-----------------------------------
+Phase 1: Project Planning & Setup (10 Points)
+   - Create the project proposal and ERD.
+   - Set up development environment (Visual Studio, .NET Core SDK, SQL Server, Git).
+   - Estimated Duration: 1 Week
+
+Phase 2: MVC Implementation (20 Points)
+   - Implement user authentication, employee, project, and task management features.
+   - Develop corresponding views, models, and controllers.
+   - Estimated Duration: 2-3 Weeks
+
+Phase 3: Web API Development & Integration (20 Points)
+   - Create REST API endpoints for CRUD operations.
+   - Secure the API and integrate with the MVC application via HttpClient.
+   - Estimated Duration: 2 Weeks
+
+Phase 4: Testing & Debugging (15 Points)
+   - Write unit tests for MVC and API components.
+   - Utilize dependency injection and mocking for robust test coverage.
+   - Estimated Duration: 1-2 Weeks
+
+Phase 5: SQL Server & Reporting (15 Points)
+   - Design a normalized SQL database with appropriate relationships.
+   - Implement stored procedures for data manipulation.
+   - Develop custom reports using SSRS.
+   - Estimated Duration: 1-2 Weeks
+
+Phase 6: Security & Deployment (20 Points)
+   - Implement role-based access control, data security measures, and comprehensive logging.
+   - Deploy the system to a cloud platform or local server.
+   - Estimated Duration: 1-2 Weeks
+
+5. Risks and Mitigation Strategies
+-------------------------------------
+Risk: Integration challenges between MVC and API components.
+Mitigation: Set up a clear API contract early, and write comprehensive tests to ensure components work together seamlessly.
+
+Risk: Security vulnerabilities such as SQL injection or CSRF/XSS attacks.
+Mitigation: Follow best practices for secure coding, use built-in features of ASP.NET Core for security, and perform regular security reviews.
+
+Risk: Potential delays in development or testing phases.
+Mitigation: Regularly track progress using a task board and commit code frequently with meaningful messages, so issues can be identified and addressed early.
+
+6. Conclusion
+--------------
+This ERMS project is designed to showcase a full-stack development process using ASP.NET Core MVC and Web API, combined with robust data management using SQL Server and enhanced security features. With clear objectives and a well-defined timeline, this project will not only provide a useful application for enterprise resource management but also serve as a comprehensive learning experience in modern web development practices and deployment strategies.
+
