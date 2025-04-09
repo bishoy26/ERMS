@@ -23,6 +23,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="Index">Employees</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Index">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="TaskItem" asp-action="Index">Tasks</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
@@ -41,9 +50,30 @@
             &copy; 2025 - ERMS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Global custom scripts for updating hidden fields (used in TaskItem Create/Edit views) -->
+    <script>
+        // When a project is selected, update the hidden field and log the value.
+        function setProjectID(id) {
+            console.log("Setting ProjectID to: " + id);
+            var projectField = document.getElementById("ProjectID");
+            if(projectField) {
+                projectField.value = id;
+            }
+        }
+        // When an employee is selected, update the hidden field and log the value.
+        function setEmployeeID(id) {
+            console.log("Setting AssignedEmployeeID to: " + id);
+            var employeeField = document.getElementById("AssignedEmployeeID");
+            if(employeeField) {
+                employeeField.value = id;
+            }
+        }
+    </script>
 </body>
 </html>

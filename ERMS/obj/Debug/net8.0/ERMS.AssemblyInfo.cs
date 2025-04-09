@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ERMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8e5b0575d9f48df8776847a3d2c7940f1682adc")]
 [assembly: System.Reflection.AssemblyProductAttribute("ERMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ERMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

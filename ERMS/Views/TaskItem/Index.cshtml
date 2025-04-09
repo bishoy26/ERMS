@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ERMS.Models.TaskItem>
+
+@{
+    ViewData["Title"] = "Task Items";
+}
+
+<h1>Task Items</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Task</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Task ID</th>
+            <th>Project</th>
+            <th>Assigned Employee</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Due Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TaskID</td>
+                <td>@item.Project?.Name</td>
+                <td>
+                    @(item.AssignedEmployee != null
+                        ? item.AssignedEmployee.FirstName + " " + item.AssignedEmployee.LastName
+                        : "Unassigned")
+                </td>
+                <td>@item.Description</td>
+                <td>@item.Priority</td>
+                <td>@item.Status</td>
+                <td>@(item.DueDate.HasValue ? item.DueDate.Value.ToShortDateString() : "")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.TaskID">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TaskID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
