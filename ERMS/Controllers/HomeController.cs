@@ -23,6 +23,12 @@ namespace ERMS.Controllers
             return View();
         }
 
+        public IActionResult AccessDenied(string message)
+        {
+            ViewData["ErrorMessage"] = message;
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
