@@ -37,7 +37,6 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        @* Conditional role-based links *@
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
@@ -51,7 +50,6 @@
                             </li>
                         }
                     </ul>
-                    <!-- Account Links -->
                     <ul class="navbar-nav">
                         @if (User.Identity?.IsAuthenticated ?? false)
                         {

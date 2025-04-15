@@ -7,7 +7,6 @@ namespace ERMS.Services
     {
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            // For testing, no email is sent.
             return Task.CompletedTask;
         }
     }

@@ -10,7 +10,6 @@ namespace ERMS.Data
         public static async Task Initialize(IServiceProvider serviceProvider)
         {
             var userManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            // Seed an Admin user.
             string adminEmail = "admin@erms.com";
             string adminPassword = "Admin@123";
             if (await userManager.FindByEmailAsync(adminEmail) == null)
@@ -27,7 +26,6 @@ namespace ERMS.Data
                     await userManager.AddToRoleAsync(adminUser, "Admin");
                 }
             }
-            // Seed a Manager user.
             string managerEmail = "manager@erms.com";
             string managerPassword = "Manager@123";
             if (await userManager.FindByEmailAsync(managerEmail) == null)
@@ -44,7 +42,6 @@ namespace ERMS.Data
                     await userManager.AddToRoleAsync(managerUser, "Manager");
                 }
             }
-            // Seed an Employee user.
             string employeeEmail = "employee@erms.com";
             string employeePassword = "Employee@123";
             if (await userManager.FindByEmailAsync(employeeEmail) == null)
